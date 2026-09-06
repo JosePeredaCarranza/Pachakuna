@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { asset } from "../lib/assets";
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -8,7 +9,7 @@ export function Hero() {
   useEffect(() => {
     const hero = heroRef.current;
     if (!hero) return;
-    hero.style.setProperty("--ambient-image", 'url("/set-fotos/Foto-2-Diablada.png")');
+    hero.style.setProperty("--ambient-image", `url("${asset("/set-fotos/Foto-2-Diablada.png")}")`);
     hero.classList.add("has-ambient-image");
   }, []);
 
@@ -20,9 +21,9 @@ export function Hero() {
           <p>Trajes y prendas tradicionales de la costa, sierra y selva, elaborados con atención al bordado, los materiales y los detalles que dan identidad a cada tradición.</p>
           <a href="#catalogo">Explorar colecciones<span aria-hidden="true">↓</span></a>
         </div>
-        <div className="hero-image"><img src="/set-fotos/Foto-2-Diablada.png" alt="Danzante de diablada" fetchPriority="high" decoding="async" /></div>
+        <div className="hero-image"><img src={asset("/set-fotos/Foto-2-Diablada.png")} alt="Danzante de diablada" fetchPriority="high" decoding="async" /></div>
       </div>
-      <img className="hero-subject" src="/set-fotos/hero-diablada-recorte2.png" alt="" aria-hidden="true" decoding="async" />
+      <img className="hero-subject" src={asset("/set-fotos/hero-diablada-recorte2.png")} alt="" aria-hidden="true" decoding="async" />
     </section>
   );
 }

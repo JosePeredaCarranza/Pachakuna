@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { asset } from "../lib/assets";
 
 const slides = [
   {
-    image: "/set-fotos/carrousel-1-hd.png",
+    image: asset("/set-fotos/carrousel-1-hd.png"),
     eyebrow: "Nuestra esencia",
     title: "Vestimos la tradición que nos representa",
     body: [
@@ -15,7 +16,7 @@ const slides = [
     href: "#catalogo",
   },
   {
-    image: "/set-fotos/carrousel-2-hd.png",
+    image: asset("/set-fotos/carrousel-2-hd.png"),
     eyebrow: "Nuestras raíces",
     title: "Cada prenda lleva una historia del Perú",
     body: [
@@ -26,7 +27,7 @@ const slides = [
     href: "#catalogo",
   },
   {
-    image: "/set-fotos/carrousel-3.png",
+    image: asset("/set-fotos/carrousel-3.png"),
     eyebrow: "Pachakuna",
     title: "Indumentaria con identidad",
     body: [

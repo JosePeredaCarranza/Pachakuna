@@ -1,7 +1,9 @@
+import { asset } from "../lib/assets";
+
 const reviews = [
-  { image: "/set-fotos/folklore-peruano-1000x600.jpg", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=85", name: "Andrea M.", role: "Testimonio de muestra", quote: "El bordado tiene muchísimo detalle y la prenda se siente muy bien trabajada. Los colores se ven incluso mejor en persona.", alt: "Escena de tradición peruana" },
-  { image: "/set-fotos/catalogo-4.jpeg", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=85", name: "Luis C.", role: "Testimonio de muestra", quote: "Me gustó mucho cómo quedó la talla y la calidad de la tela. Se siente cómoda, resistente y con bastante trabajo en cada detalle.", alt: "Pareja con indumentaria tradicional" },
-  { image: "/set-fotos/sierra3.png", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&h=160&q=85", name: "Valeria R.", role: "Testimonio de muestra", quote: "Buscaba una prenda para una presentación y superó mis expectativas. El diseño conserva muy bien la esencia tradicional y luce espectacular.", alt: "Paisaje cultural peruano" },
+  { image: asset("/set-fotos/folklore-peruano-1000x600.jpg"), avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=85", name: "Andrea M.", role: "Testimonio de muestra", quote: "El bordado tiene muchísimo detalle y la prenda se siente muy bien trabajada. Los colores se ven incluso mejor en persona.", alt: "Escena de tradición peruana" },
+  { image: asset("/set-fotos/catalogo-4.jpeg"), avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=85", name: "Luis C.", role: "Testimonio de muestra", quote: "Me gustó mucho cómo quedó la talla y la calidad de la tela. Se siente cómoda, resistente y con bastante trabajo en cada detalle.", alt: "Pareja con indumentaria tradicional" },
+  { image: asset("/set-fotos/sierra3.png"), avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&h=160&q=85", name: "Valeria R.", role: "Testimonio de muestra", quote: "Buscaba una prenda para una presentación y superó mis expectativas. El diseño conserva muy bien la esencia tradicional y luce espectacular.", alt: "Paisaje cultural peruano" },
 ] as const;
 
 function ReviewCard({ review }: { review: (typeof reviews)[number] }) {

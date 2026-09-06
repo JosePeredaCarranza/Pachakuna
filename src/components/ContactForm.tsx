@@ -1,5 +1,7 @@
 "use client";
 
+import { asset } from "../lib/assets";
+
 const whatsappMessage =
   "José, me interesó mucho el diseño y la implementación de tu página web. Me gustaría conversar contigo.";
 
@@ -22,7 +24,7 @@ export function ContactForm() {
     <section className="contact-sample contact-sample--whatsapp" id="contacto" aria-label="Contacto">
       <div className="kit-contact-form whatsapp-contact">
         <figure className="whatsapp-contact__image">
-          <img src="/set-fotos/contactanos.jpg" alt="Indumentaria tradicional de Pachakuna" loading="lazy" decoding="async" />
+          <img src={asset("/set-fotos/contactanos.jpg")} alt="Indumentaria tradicional de Pachakuna" loading="lazy" decoding="async" />
         </figure>
         <div className="whatsapp-contact__content">
           <div>

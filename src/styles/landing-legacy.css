@@ -924,7 +924,7 @@ main > section {
 
   background-image:
     linear-gradient(currentColor, currentColor),
-    url("/set-fotos/textura-hilo.png");
+    var(--texture-hilo);
 
   background-size:
     100% 100%,

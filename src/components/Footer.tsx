@@ -1,3 +1,5 @@
+import { asset } from "../lib/assets";
+
 type FooterLink = { label: string; href?: string };
 
 const groups: ReadonlyArray<{ title: string; links: ReadonlyArray<FooterLink> }> = [
@@ -20,7 +22,7 @@ export function Footer() {
       <div className="kit-footer">
         <div className="footer-main">
           <div className="footer-brand">
-            <a href="#inicio" aria-label="Pachakuna, volver al inicio"><img src="/set-fotos/logo.png" alt="Pachakuna" loading="lazy" decoding="async" /></a>
+            <a href="#inicio" aria-label="Pachakuna, volver al inicio"><img src={asset("/set-fotos/logo.png")} alt="Pachakuna" loading="lazy" decoding="async" /></a>
             <p>Indumentaria folklórica tradicional del Perú.</p>
           </div>
           <div className="footer-links">{groups.map((group) => <FooterGroup {...group} key={group.title} />)}</div>

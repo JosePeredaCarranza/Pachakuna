@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { asset } from "../lib/assets";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ export function Header() {
       <div className="header-sample header-sample--line-rounded">
         <div className="kit-header kit-header--line">
           <a className="logo-slot logo-slot--pachakuna" href="#inicio" aria-label="Pachakuna">
-            <img src="/set-fotos/logo.png" alt="Pachakuna" />
+            <img src={asset("/set-fotos/logo.png")} alt="Pachakuna" />
           </a>
           <nav className={`kit-nav${isMenuOpen ? " is-open" : ""}`} id="navigation-06" aria-label="Navegación principal">
             <a href="#inicio" onClick={() => setIsMenuOpen(false)}>Inicio</a>

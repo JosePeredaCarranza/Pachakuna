@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "../styles/kit/foundation/tokens.css";
+@import "../styles/kit/components/header/header.css";
+@import "../styles/kit/components/hero/hero.css";
+@import "../styles/kit/components/catalog/catalog.css";
+@import "../styles/kit/components/carousel/carousel.css";
+@import "../styles/kit/components/reviews/reviews.css";
+@import "../styles/kit/components/faq/faq.css";
+@import "../styles/kit/components/contact-form/contact-form.css";
+@import "../styles/kit/components/footer/footer.css";
+@import "../styles/landing-legacy.css";
+
+html { scroll-behavior: smooth; }

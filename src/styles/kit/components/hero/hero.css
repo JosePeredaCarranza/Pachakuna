@@ -1,0 +1,250 @@
+/* Componente 02: variantes de hero con una zona reservada para imagen propia. */
+.hero-catalog {
+  margin-top: 7rem;
+}
+.component-heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 0.5rem 1rem;
+  margin-bottom: 2.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-950);
+}
+.component-heading p,
+.component-heading span {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.component-heading h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 650;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+}
+.component-heading p {
+  grid-column: 1/-1;
+}
+.hero-sample {
+  margin-bottom: 4rem;
+}
+.kit-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.92fr);
+  min-height: 28rem;
+  background: var(--white);
+}
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 5.5rem);
+}
+.hero-copy h3 {
+  max-width: 34rem;
+  margin: 0;
+  font-size: clamp(2rem, 4.1vw, 4.25rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+.hero-copy > p {
+  max-width: 25rem;
+  margin: 1.6rem 0 0;
+  color: var(--gray-600);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.hero-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--gray-950);
+  font-size: 0.78rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+.hero-copy a span {
+  font-size: 1.1rem;
+}
+.hero-image {
+  position: relative;
+  display: grid;
+  min-height: 18rem;
+  place-items: center;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--gray-100) 0,
+    var(--gray-100) 9px,
+    var(--gray-200) 9px,
+    var(--gray-200) 10px
+  );
+  color: var(--gray-600);
+}
+.hero-image > span {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--gray-400);
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+}
+.hero-image small {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* Variante 01 */
+.hero-sample--classic .kit-hero {
+  border-top: 1px solid var(--gray-950);
+  border-bottom: 1px solid var(--gray-950);
+}
+.hero-sample--classic .hero-image {
+  border-left: 1px solid var(--gray-950);
+}
+/* Variante 02 */
+.hero-sample--framed {
+  padding: 1rem;
+  background: var(--gray-200);
+}
+.hero-sample--framed .kit-hero {
+  min-height: 30rem;
+  padding: 1rem;
+  gap: clamp(1rem, 3vw, 3rem);
+}
+.hero-sample--framed .hero-copy {
+  padding: clamp(1rem, 3vw, 3.5rem);
+}
+.hero-sample--framed .hero-image {
+  border: 1px solid var(--gray-950);
+}
+.hero-sample--framed .hero-copy a {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--gray-950);
+}
+/* Variante 03 */
+.hero-sample--label .kit-hero {
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+}
+.hero-sample--label .hero-copy {
+  background: var(--gray-50);
+}
+.hero-sample--label .hero-image {
+  background: var(--gray-950);
+  color: var(--white);
+}
+.hero-sample--label .hero-image > span {
+  border-color: var(--gray-400);
+  background: var(--gray-950);
+}
+/* Variante 04 */
+.hero-sample--quiet .kit-hero {
+  min-height: 32rem;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+}
+.hero-sample--quiet .hero-copy {
+  padding-left: clamp(2rem, 8vw, 9rem);
+}
+.hero-sample--quiet .hero-copy h3 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.hero-sample--quiet .hero-image {
+  margin: 2rem 2rem 2rem 0;
+}
+/* Variante 05 */
+.hero-sample--dark {
+  padding: 1rem;
+  background: var(--gray-200);
+}
+.hero-sample--dark .kit-hero {
+  background: var(--gray-950);
+  color: var(--white);
+}
+.hero-sample--dark .hero-copy > p {
+  color: var(--gray-400);
+}
+.hero-sample--dark .hero-copy a {
+  border-color: var(--white);
+}
+.hero-sample--dark .hero-image {
+  margin: 1rem 1rem 1rem 0;
+  background: var(--gray-800);
+  color: var(--gray-400);
+}
+.hero-sample--dark .hero-image > span {
+  border-color: var(--gray-600);
+  background: var(--gray-800);
+}
+@media (max-width: 720px) {
+  .hero-catalog {
+    margin-top: 5rem;
+  }
+  .component-heading {
+    margin-bottom: 2rem;
+  }
+  .component-heading span {
+    display: none;
+  }
+  .hero-sample {
+    margin-bottom: 3rem;
+  }
+  .kit-hero,
+  .hero-sample--label .kit-hero,
+  .hero-sample--quiet .kit-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .hero-copy {
+    min-height: 22rem;
+    padding: 2.25rem 1.5rem;
+  }
+  .hero-image {
+    min-height: 18rem;
+  }
+  .hero-sample--classic .hero-image {
+    border-top: 1px solid var(--gray-950);
+    border-left: 0;
+  }
+  .hero-sample--framed .kit-hero {
+    min-height: 0;
+    padding: 0.75rem;
+  }
+  .hero-sample--framed .hero-copy {
+    min-height: 20rem;
+    padding: 1.5rem;
+  }
+  .hero-sample--quiet .hero-copy {
+    padding-left: 1.5rem;
+  }
+  .hero-sample--quiet .hero-image,
+  .hero-sample--dark .hero-image {
+    margin: 0;
+  }
+  .hero-sample--dark .kit-hero {
+    gap: 0;
+  }
+  .hero-sample--dark .hero-image {
+    margin: 0 0.75rem 0.75rem;
+  }
+}

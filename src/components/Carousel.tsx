@@ -5,7 +5,7 @@ import { asset } from "../lib/assets";
 
 const slides = [
   {
-    image: asset("/set-fotos/carrousel-1-hd.png"),
+    image: asset("/set-fotos/carrousel-1.webp"),
     eyebrow: "Nuestra esencia",
     title: "Vestimos la tradición que nos representa",
     body: [
@@ -16,7 +16,7 @@ const slides = [
     href: "#catalogo",
   },
   {
-    image: asset("/set-fotos/carrousel-2-hd.png"),
+    image: asset("/set-fotos/carrousel-2.webp"),
     eyebrow: "Nuestras raíces",
     title: "Cada prenda lleva una historia del Perú",
     body: [
@@ -27,7 +27,7 @@ const slides = [
     href: "#catalogo",
   },
   {
-    image: asset("/set-fotos/carrousel-3.png"),
+    image: asset("/set-fotos/carrousel-3.webp"),
     eyebrow: "Pachakuna",
     title: "Indumentaria con identidad",
     body: [
@@ -49,7 +49,7 @@ export function Carousel() {
           <div className="carousel-track" style={{ transform: `translateX(-${active * 100}%)` }}>
             {slides.map((slide, index) => (
               <article className="carousel-slide story-slide" key={slide.title} aria-hidden={active !== index}>
-                <img className="story-image" src={slide.image} alt="" loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+                <img className="story-image" src={slide.image} alt="" loading="lazy" decoding="async" />
                 <div className="story-image-shade" aria-hidden="true" />
                 <div className="story-panel">
                   <div className="story-copy">
